@@ -8,9 +8,9 @@ namespace Lab_7
 {
     public class Substraction
     {
-        public double Substract(double firstNumber, double secondNumber)
+        public float Substract(float firstNumber, float secondNumber)
         {
-            double s = firstNumber - secondNumber;
+            float s = firstNumber - secondNumber;
             return s;
         }
     }

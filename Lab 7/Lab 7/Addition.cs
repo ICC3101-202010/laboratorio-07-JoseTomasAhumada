@@ -8,9 +8,9 @@ namespace Lab_7
 {
     public class Addition
     {
-        public double Add(double firstNumber, double secondNumber)
+        public float Add(float firstNumber, float secondNumber)
         {
-            double a = firstNumber + secondNumber;
+            float a = firstNumber + secondNumber;
             return a;
         }
     }

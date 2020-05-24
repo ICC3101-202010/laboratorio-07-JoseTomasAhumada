@@ -182,10 +182,10 @@ namespace Lab_7
             try
             {
                 secondNumber = float.Parse(ScreentextBox.Text);
-                double Add;
-                double Sub;
-                double Mul;
-                double Div;
+                float Add;
+                float Sub;
+                float Mul;
+                float Div;
                 if (operation == "+")
                 {
                     Add = add.Add(firstNumber, secondNumber);

@@ -8,9 +8,9 @@ namespace Lab_7
 {
     public class Multiplication
     {
-        public double Multiply(double firstNumber, double secondNumber)
+        public float Multiply(float firstNumber, float secondNumber)
         {
-            double m = firstNumber * secondNumber;
+            float m = firstNumber * secondNumber;
             return m;
         }
     }

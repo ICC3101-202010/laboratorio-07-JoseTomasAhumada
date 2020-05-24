@@ -8,9 +8,9 @@ namespace Lab_7
 {
     public class Division
     {
-        public double Divide(double firstNumber, double secondNumber)
+        public float Divide(float firstNumber, float secondNumber)
         {
-            double a = firstNumber / secondNumber;
+            float a = firstNumber / secondNumber;
             return a;
         }
     }
