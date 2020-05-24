@@ -51,8 +51,8 @@
             this.Historybutton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.HistoryTextBox = new System.Windows.Forms.RichTextBox();
-            this.History2button = new System.Windows.Forms.Button();
             this.DeleteHistorybutton = new System.Windows.Forms.Button();
+            this.History2button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -290,6 +290,16 @@
             this.HistoryTextBox.Text = "";
             this.HistoryTextBox.TextChanged += new System.EventHandler(this.HistoryTextBox_TextChanged);
             // 
+            // DeleteHistorybutton
+            // 
+            this.DeleteHistorybutton.Location = new System.Drawing.Point(12, 120);
+            this.DeleteHistorybutton.Name = "DeleteHistorybutton";
+            this.DeleteHistorybutton.Size = new System.Drawing.Size(70, 24);
+            this.DeleteHistorybutton.TabIndex = 2;
+            this.DeleteHistorybutton.Text = "DEL";
+            this.DeleteHistorybutton.UseVisualStyleBackColor = true;
+            this.DeleteHistorybutton.Click += new System.EventHandler(this.DeleteHistorybutton_Click);
+            // 
             // History2button
             // 
             this.History2button.Location = new System.Drawing.Point(164, 120);
@@ -300,22 +310,11 @@
             this.History2button.UseVisualStyleBackColor = true;
             this.History2button.Click += new System.EventHandler(this.History2button_Click);
             // 
-            // DeleteHistorybutton
-            // 
-            this.DeleteHistorybutton.Location = new System.Drawing.Point(12, 120);
-            this.DeleteHistorybutton.Name = "DeleteHistorybutton";
-            this.DeleteHistorybutton.Size = new System.Drawing.Size(81, 24);
-            this.DeleteHistorybutton.TabIndex = 2;
-            this.DeleteHistorybutton.Text = "BORRAR";
-            this.DeleteHistorybutton.UseVisualStyleBackColor = true;
-            this.DeleteHistorybutton.Click += new System.EventHandler(this.DeleteHistorybutton_Click);
-            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 154);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Historybutton);
             this.Controls.Add(this.ScreentextBox);
             this.Controls.Add(this.Aditionbutton);
@@ -337,6 +336,7 @@
             this.Controls.Add(this.button0);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Multiplicationbutton);
+            this.Controls.Add(this.panel1);
             this.Name = "Calculator";
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Calculator_Load);

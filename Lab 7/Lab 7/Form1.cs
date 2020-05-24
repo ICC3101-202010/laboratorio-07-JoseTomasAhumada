@@ -13,8 +13,8 @@ namespace Lab_7
 {
     public partial class Calculator : Form
     {
-        double firstNumber;
-        double secondNumber;
+        float firstNumber;
+        float secondNumber;
         string operation;
         string answer;
         public Calculator()
@@ -118,83 +118,113 @@ namespace Lab_7
         }
         private void Dotbutton_Click(object sender, EventArgs e)
         {
-            ScreentextBox.Text = ScreentextBox.Text + ".";
+            ScreentextBox.Text = ScreentextBox.Text + ",";
         }
 
         private void Aditionbutton_Click(object sender, EventArgs e)
         {
-            operation = "+";
-            firstNumber = double.Parse(ScreentextBox.Text);
-            ScreentextBox.Clear();
+            try
+            {
+                operation = "+";
+                firstNumber = float.Parse(ScreentextBox.Text);
+                ScreentextBox.Clear();
+            }
+            catch
+            {
+                ScreentextBox.Text = "SYNTAX ERROR";
+            }
         }
 
         private void Substractionbutton_Click(object sender, EventArgs e)
         {
-            operation = "-";
-            firstNumber = double.Parse(ScreentextBox.Text);
-            ScreentextBox.Clear();
+            try
+            {
+                operation = "-";
+                firstNumber = float.Parse(ScreentextBox.Text);
+                ScreentextBox.Clear();
+            }
+            catch
+            {
+                ScreentextBox.Text = "SYNTAX ERROR";
+            }
         }
 
         private void Multiplicationbutton_Click(object sender, EventArgs e)
         {
-            operation = "*";
-            firstNumber = double.Parse(ScreentextBox.Text);
-            ScreentextBox.Clear();
+            try
+            {
+                operation = "*";
+                firstNumber = float.Parse(ScreentextBox.Text);
+                ScreentextBox.Clear();
+            }
+            catch
+            {
+                ScreentextBox.Text = "SYNTAX ERROR";
+            }
         }
 
         private void Divisionbutton_Click(object sender, EventArgs e)
         {
-            operation = ":";
-            firstNumber = double.Parse(ScreentextBox.Text);
-            ScreentextBox.Clear();
+            try
+            {
+                operation = ":";
+                firstNumber = float.Parse(ScreentextBox.Text);
+                ScreentextBox.Clear();
+            }
+            catch
+            {
+                ScreentextBox.Text = "SYNTAX ERROR";
+            }
         }
 
         private void Equalbutton_Click(object sender, EventArgs e)
         {
-            //int i = 0;
-            //foreach (double d in firstNumber.ToString())
-            //{
-                
-            //}
-            secondNumber = double.Parse(ScreentextBox.Text);
-            double Add;
-            double Sub;
-            double Mul;
-            double Div;
-            if (operation == "+")
+            try
             {
-                Add = add.Add(firstNumber, secondNumber);
-                ScreentextBox.Text = Add.ToString();
-                answer = Add.ToString();
-                HistoryTextBox.Text += (firstNumber + operation + secondNumber + "=" + answer + "\n");
-            }
-            if (operation == "-")
-            {
-                Sub = sub.Substract(firstNumber, secondNumber);
-                ScreentextBox.Text = Sub.ToString();
-                answer = Sub.ToString();
-                HistoryTextBox.Text += (firstNumber + operation + secondNumber + "=" + answer + "\n");
-            }
-            if (operation == "*")
-            {
-                Mul = mul.Multiply(firstNumber, secondNumber);
-                ScreentextBox.Text = Mul.ToString();
-                answer = Mul.ToString();
-                HistoryTextBox.Text += (firstNumber + operation + secondNumber + "=" + answer + "\n");
-            }
-            if (operation == ":")
-            {
-                if (secondNumber == 0)
+                secondNumber = float.Parse(ScreentextBox.Text);
+                double Add;
+                double Sub;
+                double Mul;
+                double Div;
+                if (operation == "+")
                 {
-                    ScreentextBox.Text = "MATH ERROR";
-                }
-                else 
-                {
-                    Div = div.Divide(firstNumber, secondNumber);
-                    ScreentextBox.Text = Div.ToString();
-                    answer = Div.ToString();
+                    Add = add.Add(firstNumber, secondNumber);
+                    ScreentextBox.Text = Add.ToString();
+                    answer = Add.ToString();
                     HistoryTextBox.Text += (firstNumber + operation + secondNumber + "=" + answer + "\n");
                 }
+                if (operation == "-")
+                {
+                    Sub = sub.Substract(firstNumber, secondNumber);
+                    ScreentextBox.Text = Sub.ToString();
+                    answer = Sub.ToString();
+                    HistoryTextBox.Text += (firstNumber + operation + secondNumber + "=" + answer + "\n");
+                }
+                if (operation == "*")
+                {
+                    Mul = mul.Multiply(firstNumber, secondNumber);
+                    ScreentextBox.Text = Mul.ToString();
+                    answer = Mul.ToString();
+                    HistoryTextBox.Text += (firstNumber + operation + secondNumber + "=" + answer + "\n");
+                }
+                if (operation == ":")
+                {
+                    if (secondNumber == 0)
+                    {
+                        ScreentextBox.Text = "MATH ERROR";
+                    }
+                    else
+                    {
+                        Div = div.Divide(firstNumber, secondNumber);
+                        ScreentextBox.Text = Div.ToString();
+                        answer = Div.ToString();
+                        HistoryTextBox.Text += (firstNumber + operation + secondNumber + "=" + answer + "\n");
+                    }
+                }
+            }
+            catch
+            {
+                ScreentextBox.Text = "SYNTAX ERROR";
             }
         }
         private void Deletebutton_Click(object sender, EventArgs e)
